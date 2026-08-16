@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#b51020" />
+    <title>中国，一点都不能少</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">CHINA · PROVINCIAL PORTRAITS</p>
+        <h1>中国，一点都不能少</h1>
+        <p class="lede">在地图上漫游，读懂每一片土地的山河、风物与故事。</p>
+      </header>
+
+      <section class="map-card" aria-label="中国省级行政区互动地图">
+        <div class="map-toolbar">
+          <p><span class="status-dot" aria-hidden="true"></span>将鼠标移至省级行政区</p>
+          <button id="reset-map" type="button">重置视图</button>
+        </div>
+        <div id="map" role="img" aria-label="中国省级行政区地图，悬浮可查看省份介绍">
+          <div class="map-loading">正在载入地图…</div>
+        </div>
+        <aside id="province-card" class="province-card" aria-live="polite">
+          <p class="card-label">省级行政区</p>
+          <h2>探索中国</h2>
+          <p>将指针移到地图上的区域，查看它最具代表性的风物与简介。</p>
+        </aside>
+      </section>
+
+      <section class="world-context" aria-label="世界地图中的中国位置">
+        <div>
+          <p class="eyebrow">A VIEW FROM THE WORLD</p>
+          <h2>世界很大，中国在这里</h2>
+          <p>世界地图作为空间参照；主图聚焦中国省级行政区，便于了解各地风物。</p>
+        </div>
+        <div id="world-map" aria-hidden="true"></div>
+      </section>
+
+      <section class="statement">
+        <span class="statement-mark">·</span>
+        <p>山河辽阔，风土各异；每一寸国土都值得被认真看见。</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>互动边界仅用于省级行政区信息展示。公开发布地图请采用自然资源部标准地图服务系统的已审图底图，并按要求标注审图号。</p>
+      <a href="https://bzdt.tianditu.gov.cn/" target="_blank" rel="noreferrer">访问标准地图服务系统 ↗</a>
+    </footer>
+    <script src="data/d3.min.js"></script>
+    <script src="data/topojson-client.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
